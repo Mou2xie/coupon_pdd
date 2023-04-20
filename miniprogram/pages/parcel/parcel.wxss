@@ -1,0 +1,15 @@
+page {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.end {
+  /* border: 1px black solid; */
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #C3C3C3;
+  font-size: smaller;
+}

@@ -1,0 +1,25 @@
+<!--miniprogram/pages/authorize.wxml-->
+
+<block wx:if="{{_id != 0}}">
+    <image src="{{goodsImageUrl}}"></image>
+    <textarea class="goodsName" model:value="{{goodsName}}"></textarea>
+    <textarea class="recommend_words" model:value="{{commendDesc}}"></textarea>
+    <button bindtap="addToDatabase">入库</button>
+    <button bindtap="cancel">返回</button>
+</block>
+
+<block wx:if="{{_id == 0}}">
+    <input class="input_goodsId" placeholder="输入商品ID" bindinput="getInputValue"/>
+    <button bindtap="findGoods">
+        查找商品
+    </button>
+    <button bindtap="push">
+        手动推送消息
+    </button>
+    <!-- <button bindtap="goToPdd">
+        推广链接授权
+    </button> -->
+    <button bindtap="bannerSwitch">
+        首页banner开关
+    </button>
+</block>

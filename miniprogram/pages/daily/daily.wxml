@@ -1,0 +1,43 @@
+<swiper class="main_swiper" bindchange="swiperChange" current="{{current}}" duration="400">
+  <swiper-item class="main_swiper_item" wx:for="{{goods_list}}">
+    <block wx:if="{{item.goodsName}}">
+      <view class="goods_item_container" >
+        <view class="goods_card">
+          <image class="goods_image" mode="widthFix" src="{{item.goodsImageUrl}}"></image>
+          <view class="goods_name">{{item.goodsName}}</view>
+        </view>
+        <view class="price_container">
+          <view>{{item.couponDiscount / 100}}元券</view>
+          <text>券后 ¥{{item.useCouponPrice / 100}}</text>
+        </view>
+        <view class="recommend">
+          <image mode="widthFix" src="../../images/left_arrow.png"></image>
+          <view>{{item.commendDesc}}</view>
+          <image mode="widthFix" src="../../images/tight_arrow.png"></image>
+        </view>
+        <view class="get_btn" bindtap="goToPDD">领券</view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="goods_item_container BGcolor">
+        <image class="clock" src="../../images/clock.png" mode="widthFix"></image>
+        <text class="title">订阅好券日报</text>
+        <text class="sub_title">晚上9点准时为您发送当天的精选好券</text>
+        <view class="subscribe_btn" bindtap="subscribe">订阅日报</view>
+        <text class="tips">因微信限制，订阅一次仅能收到一次消息</text>
+      </view>
+    </block>
+  </swiper-item>
+</swiper>
+
+<view class="operate">
+  <view class="page_num">
+    <swiper class="num_swiper" vertical="{{true}}" current="{{current}}">
+      <swiper-item class="num_swiper_item" wx:for="{{num_arr}}">{{item}}</swiper-item>
+    </swiper>
+    <view class="line">/</view>
+    <view class="totle_num">{{goods_list.length}}</view>
+  </view>
+</view>
+
+<view class="tip" bindtouchstart="touchStart" bindtouchend="touchEnd">商品来自于拼多多</view>

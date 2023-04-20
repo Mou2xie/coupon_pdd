@@ -1,0 +1,38 @@
+<view class="goods_item" data-goodsid="{{goodsInfo.goodsId}}" bindtap="chooseGoods">
+  <image class="goods_cover" src="{{goodsInfo.goodsImageUrl}}"></image>
+  <view class="goods_content_container">
+    <text class="goods_name">{{goodsInfo.goodsName}}</text>
+    <view class="tag_container" data-goodsid="{{goodsInfo.goodsId}}" catchtouchstart = "touchstart" catchtouchend = "touchend">
+      <text class="tag from">拼多多</text>
+      <text class="tag sold" wx:if="{{false}}">已售{{goodsInfo.sold}}</text>
+    </view>
+    <view class="price_container">
+      <block wx:if="{{goodsInfo.hasCoupon}}">
+        <view class="price_group">
+          <text>券后</text>
+          <text>¥</text>
+          <text>{{goodsInfo.useCouponPrice/100}}</text>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="price_group_nocoupon">
+          <text>¥</text>
+          <text>{{goodsInfo.useCouponPrice/100}}</text>
+        </view>
+      </block>
+      <block wx:if="{{goodsInfo.hasCoupon}}">
+        <view class="coupon_group" catchtap="goToPDD">
+          <view class="semicircle_left"></view>
+          <view class="coupon_price">{{goodsInfo.couponDiscount/100}}元券</view>
+          <view class="get">领</view>
+          <view class="semicircle_right"></view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="direct_buy_btn" catchtap="goToPDD">
+          购买
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

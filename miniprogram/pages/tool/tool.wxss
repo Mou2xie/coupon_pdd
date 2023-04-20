@@ -1,0 +1,51 @@
+page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+}
+
+image {
+    /* border:1px black solid; */
+    width: 400rpx;
+    height: 400rpx;
+    border-radius: 20rpx;
+    margin-top: 50rpx;
+}
+
+.goodsName {
+    /* border:1px black solid; */
+    width: 80%;
+    height: 100rpx;
+    margin-top: 30rpx;
+    background: rgb(248, 248, 248);
+}
+
+.recommend_words {
+    /* border:1px black solid; */
+    width: 80%;
+    height: 200rpx;
+    margin-top: 30rpx;
+    background: rgb(248, 248, 248);
+}
+
+.input_goodsId {
+    /* border:1px black solid; */
+    border-radius: 10rpx;
+    background: rgb(255, 238, 238);
+    height: 80rpx;
+    width: 60%;
+    padding-left: 20rpx;
+    margin: 300rpx 0rpx 0rpx 0rpx;
+
+}
+
+.input-placeholder {
+    color: rgb(255, 187, 187);
+}
+
+button {
+    background: #ED6464;
+    color: white;
+    margin-top: 50rpx;
+}

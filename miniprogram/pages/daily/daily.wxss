@@ -1,0 +1,234 @@
+page {
+  /* border:1px solid black; */
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  background: #ED6464;
+}
+
+.main_swiper {
+  /* border:1px solid black; */
+  height: 80%;
+}
+
+.main_swiper_item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.goods_item_container {
+  /* border: 1px solid black; */
+  height: 100%;
+  margin:0rpx 30rpx 0rpx 30rpx;
+  border-radius: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: white;
+  position: relative;
+}
+
+.BGcolor {
+  background: #FFEBEB;
+  justify-content: center;
+}
+
+.clock {
+  width: 20%;
+  align-self: center;
+}
+
+.title {
+  margin-top: 30rpx;
+  color: #ED6464;
+  font-size: 50rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.sub_title {
+  color: #FF9999;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.subscribe_btn {
+  margin-top: 260rpx;
+  color: white;
+  background: #FF3737;
+  width: 50%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  padding: 20rpx 0rpx 20rpx 0rpx;
+  border-radius: 100rpx;
+}
+
+.tips {
+  margin-top: 20rpx;
+  align-self: center;
+  font-size: 24rpx;
+  color: #FF9999;
+}
+
+.goods_card {
+  /* border: 1px solid black; */
+  margin: 40rpx 40rpx 0rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.goods_image {
+  flex-shrink: 0;
+  width: 50%;
+  border-radius: 20rpx;
+  align-self: center;
+}
+
+@media (min-height: 625px) {
+  .goods_image {
+    flex-shrink: 0;
+    width: 75%;
+    border-radius: 20rpx;
+    align-self: center;
+  }
+}
+
+.goods_name {
+  /* border:1px solid black; */
+  color: #5F5F5F;
+  font-size: 40rpx;
+  margin-top: 20rpx;
+  text-align: center;
+  display: -webkit-box;             /*将对象转为弹性盒模型展示*/
+  -webkit-box-orient: vertical;     /*设置弹性盒模型子元素的排列方式*/
+  -webkit-line-clamp: 2;            /*限制文本行数*/
+  overflow: hidden;                 /*超出隐藏*/
+}
+
+.price_container {
+  /* border: 1px solid black; */
+  margin: 20rpx 40rpx 0rpx 40rpx;
+  font-size: 34rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.price_container view:first-child {
+  background: #FFEBEB;
+  border: 1rpx solid #FF3737;
+  box-sizing: border-box;
+  color: #F5302D;
+  padding: 0rpx 12rpx 0rpx 12rpx;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+
+.price_container text {
+  background: #FF3737;
+  color: white;
+  padding: 0rpx 12rpx 0rpx 12rpx;
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+
+.recommend {
+  /* border: 1px black solid; */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  color: #ED6464;
+  font-size: 32rpx;
+}
+
+.recommend view {
+  /* border: 1px black solid; */
+  margin: 0rpx 60rpx 0rpx 60rpx;
+  text-align: center;
+  display: -webkit-box;             /*将对象转为弹性盒模型展示*/
+  -webkit-box-orient: vertical;     /*设置弹性盒模型子元素的排列方式*/
+  -webkit-line-clamp: 2;            /*限制文本行数*/
+  overflow: hidden; 
+}
+
+.recommend image:first-child {
+  margin-left: 20rpx;
+  width: 80rpx;
+}
+
+.recommend image:last-child {
+  margin-right: 20rpx;
+  width: 80rpx;
+  align-self: flex-end;
+}
+
+.get_btn {
+  background: #FF3737;
+  color: white;
+  align-self: center;
+  width: 50%;
+  padding: 20rpx 0rpx 20rpx 0rpx;
+  border-radius: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 40rpx;
+  font-size: 35rpx;
+}
+
+.operate {
+  /* border:1px solid black; */
+  display: flex;
+  color: white;
+  font-size: 40rpx;
+}
+
+.page_num{
+  /* border:1px solid black; */
+  display: flex;
+  height: 60rpx;
+  margin: 20rpx 0rpx 0rpx 30rpx;
+  padding: 0rpx 20rpx 0rpx 20rpx;
+  background: #D15252;
+  border-radius: 100rpx;
+}
+
+.num_swiper {
+  /* border:1px solid black; */
+  height: 60rpx;
+  width: 40rpx;
+}
+
+.num_swiper_item {
+  display: flex;
+  justify-content: center;
+}
+
+.line {
+  margin: 0rpx 10rpx 0rpx 0rpx;
+}
+
+.totle_num {
+  margin-right: 8rpx;
+}
+
+.tip {
+  /* border: 1px solid black; */
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 20rpx;
+  color: #C64F4F;
+  font-size: smaller;
+}
+
+
+
+

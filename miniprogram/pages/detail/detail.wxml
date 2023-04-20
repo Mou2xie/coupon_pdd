@@ -1,0 +1,66 @@
+<scroll-view scroll-y="{{true}}" upper-threshold="{{200}}" lower-threshold="{{900}}" bindscrolltoupper="hideBottomBar" bindscrolltolower="showBottomBar">
+  <view class="main_image">
+    <image class="goods_cover_image" src="{{goods_info.goodsImageUrl}}" mode="widthFix"></image>
+  </view>
+  <view class="goods_info">
+    <view class="price">
+      <text class="price_new">券后 ¥{{goods_info.useCouponPrice /100}}</text>
+      <text class="price_old" wx:if="{{goods_info.hasCoupon}}">原价¥{{(goods_info.useCouponPrice + goods_info.couponDiscount) /100}}</text>
+      <view class="goods_from">
+        <image src="../../images/pdd.png"></image>
+        <text>拼多多</text>
+      </view>
+    </view>
+    <view class="name">{{goods_info.goodsName}}</view>
+    <block wx:if="{{goods_info.hasCoupon}}">
+      <view class="coupon" bindtap="getCoupon">
+        <text class="coupon_1">¥</text>
+        <text class="coupon_2">{{goods_info.couponDiscount/100}}</text>
+        <view class="coupon_3">
+          <text>购物优惠券</text>
+          <text>领取后下单立减</text>
+        </view>
+        <view class="coupon_4">领取</view>
+      </view>
+    </block>
+    <block wx:else>
+      <text class="no_coupon">本商品无需领券，直接购买即可享受低价优惠</text>
+      <view class="no_coupon_btn" bindtap="getCoupon">立即购买</view>
+    </block>
+  </view>
+
+  <view class="recommend" wx:if="{{goods_info.recommend}}">
+    <text>{{goods_info.recommend}}</text>
+  </view>
+
+  <block wx:if="{{goods_info.goodsGalleryUrls.length != 0}}">
+    <view class="goods_detail">商品介绍</view>
+
+    <view class="detail_image">
+      <image wx:for="{{goods_info.goodsGalleryUrls}}" src="{{item}}" mode="widthFix"></image>
+    </view>
+  </block>
+
+  <view class="button" bindtap="findMoreCoupon">
+    <view>看看别的优惠券</view>
+  </view>
+
+
+  <View class="place_taken"></View>
+
+</scroll-view> 
+
+<view class="bottom_bar" animation="{{animationData}}"> 
+  <view class="bottom_icon_container margin" data-url="../index/index" bindtap="navigateTo">
+    <image src="../../images/home.png"></image>
+    <text>首页</text>
+  </view>
+  <button id="share_button" open-type="share">
+    <view class="bottom_icon_container">
+      <image src="../../images/fenxiang.png"></image>
+      <text>分享</text>
+    </view>
+  </button>
+  <view class="get_coupon_btn" bindtap="getCoupon" wx:if="{{goods_info.hasCoupon}}">立即领券</view>
+  <view class="get_coupon_btn" bindtap="getCoupon" wx:else>立即购买</view>
+</view>

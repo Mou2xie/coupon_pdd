@@ -1,0 +1,22 @@
+<scroll-view class="scrollview" scroll-x="{{true}}" enhanced="{{true}}" show-scrollbar="{{false}}" scroll-into-view="{{sort_chosen}}" scroll-with-animation="{{true}}">
+  <view class="scrollview_item" wx:for="{{sort}}">
+    <view class="{{item.isChoosen ? 'sort choosen':'sort'}}" id="{{item.sortId}}" data-catid="{{item.catId}}" bindtap="chooseSort">{{item.catName}}</view>
+  </view>
+</scroll-view>
+
+<view class="place_taken"></view>
+
+<view class="daily_banner" bindtap="goToDaily" wx:if="{{banner_show}}">
+  <view class="daily_banner_left"></view>
+  <view class="daily_banner_content">
+    <view class="daily_banner_text">
+      <text>今天的好券日报已生成</text>
+      <text>点击查看今天值得一抢的优惠券</text>
+    </view>
+    <image mode="aspectFill" src="../../images/percent.png"></image>
+  </view>
+  <view class="daily_banner_right"></view>
+</view>
+
+<goods_item wx:for="{{goods_list_show}}" goods-info="{{item}}"></goods_item>
+<view class="end" wx:if="{{isListEnd}}">陆续添加中，请等会儿再来看看</view>

@@ -1,0 +1,111 @@
+page {
+  display: flex;
+  flex-direction: column; 
+  align-items: stretch;
+}
+
+.scrollview {
+  border: 1px #F0F0F0 solid;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  background: white;
+  z-index: 3;
+}
+
+.place_taken {
+  height: 80rpx;
+}
+
+.scrollview_item {
+  /* border: 1px black solid; */
+  display: inline-block;
+  height: 80rpx;
+  width: 20%;
+}
+
+.sort {
+  /* border: 1px black solid; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #646464;
+  font-size: 34rpx;
+}
+
+.choosen {
+  color: #F5302D;
+}
+
+.daily_banner {
+  /* border: 1px black solid; */
+  margin:30rpx 20rpx 0rpx 20rpx;
+  height: 140rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.daily_banner view {
+  /* border: 1px black solid; */
+  background: #ED6464;
+}
+
+.daily_banner_left {
+  border-top-left-radius: 100rpx;
+  border-bottom-left-radius: 100rpx;
+  width: 80rpx;
+}
+
+.daily_banner_right {
+  border-top-right-radius: 100rpx;
+  border-bottom-right-radius: 100rpx;
+  width: 80rpx;
+}
+
+.daily_banner_content {
+  /* border: 1px black solid; */
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.daily_banner_text {
+  /* border: 1px black solid; */
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  margin-left: -18rpx;
+}
+
+.daily_banner_text text:first-child {
+  font-size: 38rpx;
+  font-weight: bolder;
+}
+
+.daily_banner_text text:last-child {
+  font-size: 26rpx;
+}
+
+.daily_banner_content image {
+  /* border: 1px black solid; */
+  height: 100%;
+  width: 160rpx;
+  opacity: 0.15;
+}
+
+.end {
+  /* border: 1px black solid; */
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #C3C3C3;
+  font-size: smaller;
+}
+
+
+

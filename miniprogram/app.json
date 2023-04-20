@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/daily/daily",
+    "pages/parcel/parcel",
+    "pages/brand/brand",
+    "pages/detail/detail",
+    "pages/tool/tool"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "navigationBarBackgroundColor": "#ED6464",
+    "navigationBarTitleText": "好券日报",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#9F9F9F",
+    "selectedColor": "#ED6464",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "热门推荐",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index_select.png"
+      },
+      {
+        "pagePath": "pages/daily/daily",
+        "text": "好券日报",
+        "iconPath": "images/daily.png",
+        "selectedIconPath": "images/daily_select.png"
+      },
+      {
+        "pagePath": "pages/parcel/parcel",
+        "text": "1.9包邮",
+        "iconPath": "images/parcel.png",
+        "selectedIconPath": "images/parcel_select.png"
+      },
+      {
+        "pagePath": "pages/brand/brand",
+        "text": "大牌特价",
+        "iconPath": "images/brand.png",
+        "selectedIconPath": "images/brand_select.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

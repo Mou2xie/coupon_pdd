@@ -1,0 +1,2 @@
+<goods_item wx:for="{{goods_list}}" goodsInfo="{{item}}"></goods_item>
+<view class="end" wx:if="{{!isDone}}">陆续添加中，请等会儿再来看看</view>
